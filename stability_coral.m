@@ -22,7 +22,7 @@ R = -(C*r*(C + M - 1))/(a + n + C*r + M*s);%pre-solved coral recruitment equatio
 dA = a*R + g*C*(1-R-C-M) - b*C*M - m*C;%adult coral
 dM = s*M*(1-R-C-M) + s*R*M + b*C*M - h*M - (z*M*o*C)/(1+o*C);%macroalgae
 J = jacobian([dA, dM], [C M]);%obtain Jacobian matrix for the ODE system
-ss1 = vpasolve([0 == a*R + g*C*(1-R-C-M) - b*C*M - m*C, 0==s*M*(1-R-C-M) + s*R*M + b*C*M - h*M - (z*M*o*C)/(1+o*C)], [C, M]);%obtain all numerical solutions for the ODEs
+ss1 = vpasolve([0 == a*R + g*C*(1-R-C-M) - b*C*M - m*C, 0 == s*M*(1-R-C-M) + s*R*M + b*C*M - h*M - (z*M*o*C)/(1+o*C)], [C, M]);%obtain all numerical solutions for the ODEs
 for jj=1:length(ss1.C)%sequentially plot equilibria for a given range of parameter values
     if isreal(ss1.C(jj)) && isreal(ss1.M(jj))%only concerned with real equilibria
         if all([ss1.C(jj) ss1.M(jj)] >= 0 & [ss1.C(jj) ss1.M(jj)] <= 1)%only concerned with nontrivial solutions, i.e. if proportion od coral and macroalgal cover is less than 1
