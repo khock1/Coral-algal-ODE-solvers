@@ -9,7 +9,7 @@ clear;
 x = 0:0.05:1;
 y = 0:0.05:1;
 spc = [0 0];
-axlim = 0.8;%limit to parameter space to be xexplored, has to be <=1
+axlim = 0.8;% limit to the explored parameter space, has to be <=1 because max possible cover <= 1
 for i=1:size(x,2)
     for j=1:size(y,2)
         if x(i) + y(j) <= axlim
