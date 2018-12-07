@@ -7,7 +7,7 @@
 % Solve for nullclines, then also plot nullclines
 
 clear;
-% constrain parameter space to realistic values, ensuring that covers together cannot exceed 1
+% constrain parameter space to realistic values, ensuring that total cover cannot exceed 1
 x = 0:0.05:1;
 y = 0:0.05:1;
 spc = [0 0];
