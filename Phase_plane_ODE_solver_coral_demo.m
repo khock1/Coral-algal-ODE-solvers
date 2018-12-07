@@ -1,8 +1,10 @@
 % Author: Karlo Hock, University of Queensland.
 % Equations from Fabina et al. 2015, Ecological Applications, 25(6), 1534–1545
 
-% Solve ODEs for coral-macroalgal dynamics, plot pahse plane portrait of the solutions
-% Solve for nullclines, then plot nullclines
+% Solve ODEs for coral-macroalgal dynamics
+% Peform stability analysis for the ODE system
+% Plot phase plane portrait of the solutions and equilibria
+% Solve for nullclines, then also plot nullclines
 
 clear;
 % constrain parameter space to realistic values, ensuring that covers together cannot exceed 1
