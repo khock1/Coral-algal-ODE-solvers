@@ -60,6 +60,7 @@ print -depsc2 coral_phaseplane.eps
 
 %solve for coral and algal nullclines, draw them and draw the axes
 figure; hold on;
+syms Cs Ms;
 Rs = -(Cs*r*(Cs + Ms - 1))/(a + n + Cs*r + Ms*s);%pre-solved coral recruitment equation dR = r*A*(1-R-A-M) - a*R - s*R*M - n*R to obtain R
 coral_nullcline = solve(0 == a.*Rs + g.*Cs.*(1-Rs-Cs-Ms) - b.*Cs.*Ms - m.*Cs, Cs);
 algal_nullcline = solve(0 == s.*Ms.*(1-Rs-Cs-Ms) + s.*Rs.*Ms + b.*Cs*Ms - h.*Ms - (z.*Ms*o.*Cs)/(1+o.*Cs), Ms);
