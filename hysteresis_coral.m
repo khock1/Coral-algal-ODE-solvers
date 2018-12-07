@@ -1,9 +1,9 @@
 % Author: Karlo Hock, University of Queensland.
-% Equations from Fabina et al. 2015, Ecological Applications, 25(6), 1534–1545
+% Equations from Fabina et al. 2015, Ecological Applications, 25(6), 1534â€“1545
 
 %Perfom stability analysis for coral-algal ODEs over a range of parameter values
 %Test a range of grazing pressures to examine how stability structure changes
-%Plot hyteresis plot with colour of points distinguishing stable vs unstable equilibria
+%Plot hysteresis plot with different colours for stable vs unstable equilibria
 
 clear;
 syms C M;
