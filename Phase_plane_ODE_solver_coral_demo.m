@@ -34,13 +34,13 @@ o = 4;% herbivore habitat provisioning
 parameters = [a,s,n,g,b,m,h,z,o,r];
 figure; hold on;
 
-% solve and draw solution for parameter space
+% solve and draw solutions for explored parameter space
 for ii = 1:length(spc)
     options = odeset('NonNegative', 1);
     [T,Y] = ode45(@popdyn_coral, [0 200], [spc(ii,2), spc(ii,1)], options, parameters);% solve ODEs for parameter space
     C = Y(:, 1); % adult coral
     M = Y(:, 2); % macroalgae
-    phaseplane = plot(M, C, 'Color', 'k'); % plot solutions
+    phaseplane = plot(M, C, 'Color', 'k'); % plot this solution
 end
 
 title('Phase plane - Coral-macroalgal dynamics', 'FontSize', 11)
